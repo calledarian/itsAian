@@ -1,3 +1,7 @@
+body {
+    background-color: brown;
+}
+
 .profile-container {
     width: 350px;
     background-color: green;
@@ -52,4 +56,14 @@
     border: 2px solid black;
     padding: 5px;
     display: inline-block;  
+}
+
+#email-box {
+    font-family: monospace;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+      
 }
