@@ -1,0 +1,55 @@
+.profile-container {
+    width: 350px;
+    background-color: green;
+    position: absolute;
+    top: 131px;
+    left: 33%;
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    color: white;
+}
+
+.profile-container:hover {
+    transition: 0.5s;
+    transform: scale(1.4);
+}
+
+.text-container {
+    width: 300px;
+    height: 60px;
+    background-color: gray;
+
+}
+
+.profile-title {
+    font-family: monospace;
+    margin: 5px;
+    background-color: rgb(255, 0, 221);
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;
+    
+
+}
+
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 2px solid black;
+    left: 10%;
+
+}
+
+.contact-me {
+    font-family: monospace;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;  
+}
