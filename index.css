@@ -14,16 +14,15 @@ body {
     color: white;
 }
 
-.profile-container:hover {
+/* .profile-container:hover {
     transition: 0.5s;
     transform: scale(1.4);
-}
+} */
 
-.text-container {
-    width: 300px;
-    height: 60px;
-    background-color: gray;
-
+.profile-bio {
+    background-color: gray; 
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .profile-title {
@@ -32,7 +31,7 @@ body {
     background-color: rgb(255, 0, 221);
     border-radius: 20px;
     border: 2px solid black;
-    padding: 5px;
+    padding: 8px;
     display: inline-block;
     
 
@@ -56,6 +55,16 @@ body {
     border: 2px solid black;
     padding: 5px;
     display: inline-block;  
+    position: absolute;
+    top: 70%;
+    left: 44%;
+}
+
+.contact-me:hover {
+    transition: 0,5s;
+    transform: scale(1.2);
+
+
 }
 
 #email-box {
@@ -65,5 +74,7 @@ body {
     display: inline-block;
     position: absolute;
     padding: 10px;
+    top: 80%;
+    left: 43%;
       
 }
