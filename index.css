@@ -1,7 +1,7 @@
 body {
     background-color: brown;
-    /* display: flex;
-    justify-content: center; */
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .parent-profile-container {
@@ -18,17 +18,15 @@ body {
     border: 2px solid black;
     padding: 20px;
     color: white;
+    text-align: center;
 }
-
-/* .profile-container:hover {
-    transition: 0.5s;
-    transform: scale(1.4);
-} */
 
 .profile-bio {
     background-color: gray;
     border: 2px solid black;
     border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .profile-title {
@@ -39,87 +37,106 @@ body {
     border: 2px solid black;
     padding: 8px;
     display: inline-block;
-
-
 }
 
 .profile-photo {
     width: 80px;
     height: 80px;
-    border-radius: 10%;
+    border-radius: 50%;
     object-fit: cover;
     border: 2px solid black;
-    left: 10%;
-
 }
 
 .contact-me {
     display: flex;
     justify-content: center;
-    margin: 10px;
+    margin-top: 10px;
 }
 
 .contact-me-button {
     font-family: monospace;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 20px;
     border: 2px solid black;
-
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-.contact-me:hover {
-    transition: 0, 5s;
-    transform: scale(1.2);
-
-
+.contact-me-button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 #email-box {
-    font-family: monospace;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid black;
-    display: inline-block;
     position: absolute;
-    padding: 10px;
     top: 80%;
-    left: 43%;
-
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    display: none;
 }
 
-/* .skills-box {
-    width: 700px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: chartreuse;
-    position: absolute;
-    top: 350PX;
-} */
-.fun-box {
-    width: 700px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: chartreuse;
-    position: absolute;
-    top: 350PX;
-    right: 10px;
-
+/* The parent container for the green box */
+.parent-skills-box {
+    position: fixed;
+    top: 70px; /* Position it slightly down from the top */
+    left: 0;
+    width: 100px; /* Initial small width to hide the images */
+    height: 150px; /* Increase the height to make room for images horizontally */
+    background-color: rgb(21, 240, 21);
+    border-radius: 0 35px 35px 0;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide the content that goes outside the box */
+    transition: width 0.4s ease-in-out; /* Smooth width transition */
 }
 
-/* .projects-box {
-    width: 700px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: chartreuse;
-    position: absolute;
-    top: 50PX;
-} */
-
-.socials-box {
-    width: 700px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: chartreuse;
-    position: absolute;
-    top: 50PX;
-
+/* When hovering over the green box, it expands */
+.parent-skills-box:hover {
+    width: 500px; /* Expand the box when hovered */
 }
+
+/* This is the container that holds all the icons (images) */
+.skills-box {
+    display: flex;
+    gap: 15px; /* Space between images */
+    align-items: center; /* Center align the images horizontally */
+    opacity: 0; /* Hide icons initially */
+    transition: opacity 0.4s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* When the parent box is hovered, show the images by changing the opacity */
+.parent-skills-box:hover .skills-box {
+    opacity: 1; /* Make the images visible */
+}
+
+/* Styling each skill image container */
+.skills-box div {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for images */
+}
+
+/* Add a hover effect on individual images (they scale a bit) */
+.skills-box div:hover {
+    transform: scale(1.2); /* Slightly scale the image on hover */
+}
+
+/* Style for the images themselves */
+.skills-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
