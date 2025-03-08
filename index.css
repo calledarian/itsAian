@@ -65,11 +65,12 @@ body {
 .contact-me-button:hover {
     transform: scale(1.1);
     transition: 0.3s;
+    background-color: cornflowerblue;
 }
 
 #email-box {
     position: absolute;
-    top: 80%;
+    top: 500px;
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
@@ -84,37 +85,48 @@ body {
 /* The parent container for the green box */
 .parent-skills-box {
     position: fixed;
-    top: 70px; /* Position it slightly down from the top */
+    top: 70px;
+    /* Position it slightly down from the top */
     left: 0;
-    width: 100px; /* Initial small width to hide the images */
-    height: 150px; /* Increase the height to make room for images horizontally */
+    width: 100px;
+    /* Initial small width to hide the images */
+    height: 150px;
+    /* Increase the height to make room for images horizontally */
     background-color: rgb(21, 240, 21);
     border-radius: 0 35px 35px 0;
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Hide the content that goes outside the box */
-    transition: width 0.4s ease-in-out; /* Smooth width transition */
+    overflow: hidden;
+    /* Hide the content that goes outside the box */
+    transition: width 0.4s ease-in-out;
+    /* Smooth width transition */
 }
 
 /* When hovering over the green box, it expands */
 .parent-skills-box:hover {
-    width: 500px; /* Expand the box when hovered */
+    width: 500px;
+    /* Expand the box when hovered */
 }
 
 /* This is the container that holds all the icons (images) */
 .skills-box {
     display: flex;
-    gap: 15px; /* Space between images */
-    align-items: center; /* Center align the images horizontally */
-    opacity: 0; /* Hide icons initially */
-    transition: opacity 0.4s ease-in-out; /* Smooth fade-in effect */
+    gap: 15px;
+    /* Space between images */
+    align-items: center;
+    /* Center align the images horizontally */
+    opacity: 0;
+    /* Hide icons initially */
+    transition: opacity 0.4s ease-in-out;
+    /* Smooth fade-in effect */
 }
 
 /* When the parent box is hovered, show the images by changing the opacity */
 .parent-skills-box:hover .skills-box {
-    opacity: 1; /* Make the images visible */
+    opacity: 1;
+    /* Make the images visible */
 }
 
 /* Styling each skill image container */
@@ -125,12 +137,14 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for images */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for images */
 }
 
 /* Add a hover effect on individual images (they scale a bit) */
 .skills-box div:hover {
-    transform: scale(1.2); /* Slightly scale the image on hover */
+    transform: scale(1.2);
+    /* Slightly scale the image on hover */
 }
 
 /* Style for the images themselves */
@@ -140,3 +154,69 @@ body {
     object-fit: contain;
 }
 
+.parent-hobbies {
+    position: fixed;
+    top: 70px;
+    /* Position it slightly down from the top */
+    right: 0;
+    width: 100px;
+    /* Initial small width to hide the images */
+    height: 150px;
+    /* Increase the height to make room for images horizontally */
+    background-color: rgb(21, 240, 21);
+    border-radius: 35px 0 0 35px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Hide the content that goes outside the box */
+    transition: width 0.4s ease-in-out;
+    /* Smooth width transition */
+
+}
+
+.parent-hobbies:hover {
+    width: 500px;
+    /* Expand the box when hovered */
+}
+
+.hobbies {
+    display: flex;
+    gap: 15px;
+    /* Space between images */
+    align-items: center;
+    /* Center align the images horizontally */
+    opacity: 0;
+    /* Hide icons initially */
+    transition: opacity 0.4s ease-in-out;
+    /* Smooth fade-in effect */
+
+}
+
+.parent-hobbies:hover .hobbies {
+    opacity: 1;
+    /* Make the images visible */
+}
+
+.hobbies div {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for images */
+}
+
+.hobbies div:hover {
+    transform: scale(1.2);
+    /* Slightly scale the image on hover */
+}
+
+.hobbies img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
