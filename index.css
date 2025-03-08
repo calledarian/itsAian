@@ -18,7 +18,7 @@ body {
     border: 2px solid black;
     padding: 20px;
     color: white;
-    text-align: center;
+    
 }
 
 .profile-bio {
@@ -42,7 +42,7 @@ body {
 .profile-photo {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 20px;
     object-fit: cover;
     border: 2px solid black;
 }
@@ -216,6 +216,124 @@ body {
 }
 
 .hobbies img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.parent-projects-box {
+    position: fixed;
+    top: 350px;
+    /* Position it slightly down from the top */
+    left: 0;
+    width: 100px;
+    /* Initial small width to hide the images */
+    height: 150px;
+    /* Increase the height to make room for images horizontally */
+    background-color: rgb(21, 240, 21);
+    border-radius: 0 35px 35px 0;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Hide the content that goes outside the box */
+    transition: width 0.4s ease-in-out;
+    /* Smooth width transition */
+}
+
+.parent-projects-box:hover {
+    width: 500px;
+    /* Expand the box when hovered */
+}
+
+.projects-box {
+    display: flex;
+    gap: 15px;
+    /* Space between images */
+    align-items: center;
+    /* Center align the images horizontally */
+    opacity: 0;
+    /* Hide icons initially */
+    transition: opacity 0.4s ease-in-out;
+    /* Smooth fade-in effect */
+
+}
+
+.parent-projects-box:hover .projects-box {
+    opacity: 1;
+    /* Make the images visible */
+}
+
+.projects-box div {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition for images */
+}
+
+.projects-box div:hover {
+    transform: scale(1.2);
+    /* Slightly scale the image on hover */
+}
+
+.projects-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.parent-socials-box {
+    position: fixed;
+    top: 350px;
+    right: 0;
+    width: 100px;
+    height: 150px;
+    background-color: rgb(21, 240, 21);
+    border-radius: 35px 0 0 35px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+}
+
+.parent-socials-box:hover {
+    width: 500px;
+}
+
+.socials-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.parent-socials-box:hover .socials-box {
+    opacity: 1;
+}
+
+.socials-box div {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.socials-box div:hover {
+    transform: scale(1.2);
+}
+
+.socials-box img {
     width: 60px;
     height: 60px;
     object-fit: contain;
