@@ -12,3 +12,23 @@ for (let btn of contactMeBtns) {
         }
     });
 }
+
+let profileBio = "Welcome to my portfolio! Here you'll find my projects, skills, and interests as a Junior Developer. Explore and feel free to connect!";
+
+
+let bioElement = document.querySelector(".profile-bio");
+bioElement.innerHTML = "";
+
+let i = 0;
+
+function typeBio() {
+    if (i < profileBio.length) {  // Use profileBio instead of bioText
+        bioElement.innerHTML += profileBio.charAt(i);
+        i++;
+        setTimeout(typeBio, 50);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    typeBio();  // Starts typing effect when the DOM content is loaded
+});

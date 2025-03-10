@@ -220,6 +220,16 @@ body {
     transition: background-color 0.3s, fill 0.3s;
 }
 
+.projects-box a{
+    background-color: white;
+    border-radius: 20%;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s, fill 0.3s;
+}
+
 .socials-box a::before {
     content: attr(data-social);
     font-size: xx-small;
@@ -234,7 +244,26 @@ body {
     transition: 200ms cubic-bezier(.42,0,.44,1.68);
 }
 
+.projects-box a::before {
+    content: attr(data-social);
+    font-size: xx-small;
+    position: absolute;
+    background-color: var(--accent-color);
+    color: white;
+    padding: .4em .8em;
+    text-decoration: none;
+    border-radius: 100px;
+    transform: translateY(-15px) translateX(-5px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+}
+
 .socials-box a:hover {
+    background-color: var(--accent-color);
+    fill: white;
+}
+
+.projects-box a:hover {
     background-color: var(--accent-color);
     fill: white;
 }
@@ -257,6 +286,29 @@ body {
 }
 
 .socials-box a:hover::after {
+    transform: translateY(-30px) translateX(0);
+    rotate: 0;
+    opacity: 1;
+}
+
+.projects-box a::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);   
+    transform: translateY(100px) translateX(-35px);
+}
+
+.projects-box a:hover::before {
+    transform: translateY(-45px) translateX(0);
+    rotate: 0;
+    opacity: 1;
+}
+
+.projects-box a:hover::after {
     transform: translateY(-30px) translateX(0);
     rotate: 0;
     opacity: 1;
