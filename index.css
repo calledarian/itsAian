@@ -229,7 +229,6 @@ body {
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 100px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: translateY(-15px) translateX(-5px) rotate(25deg);
     opacity: 0;
     transition: 200ms cubic-bezier(.42,0,.44,1.68);
