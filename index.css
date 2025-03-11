@@ -58,6 +58,7 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     transition: transform 0.5s, background-color 0.5s;
+    margin: 10px;
 }
 
 .contact-me-button:hover,
@@ -68,17 +69,16 @@ body {
 }
 
 #email-box {
-    position: absolute;
-    top: 500px;
+    position: fixed;
+    top: 80vh;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgb(58, 88, 189);
     border: 2px solid black;
     padding: 10px;
     display: none;
-    flex: 1;
     gap: 10px;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .parent-skills-box,
@@ -167,13 +167,13 @@ body {
 }
 
 .skills-box img,
-.hobbies img,
-.projects-box img {
+.hobbies img {
     width: 60px;
     height: 60px;
     object-fit: contain;
 }
 
+.projects-box img,
 .socials-box img {
     width: 40px;
     height: 40px;
@@ -184,29 +184,31 @@ body {
 #socials-name,
 #hobbies-name,
 #projects-name {
-    font-size: x-large;
+    padding: 5px;
+    font-size: large;
     background-color: aliceblue;
     position: fixed;
     border-radius: 15px;
+    border: 2px solid black;
 }
 
 #skills-name {
-    top: 35px;
+    top: 30px;
     left: 5px;
 }
 
 #hobbies-name {
-    top: 35px;
+    top: 30px;
     right: 5px;
 }
 
 #socials-name {
-    top: 315px;
+    top: 310px;
     right: 5px;
 }
 
 #projects-name {
-    top: 315px;
+    top: 310px;
     left: 5px;
 }
 
